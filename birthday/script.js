@@ -45,6 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     musicToggle.innerHTML = '<span class="icon">🎵</span> Pause Music';
                 }).catch(e => console.log("Audio play failed:", e));
             }
+
+            // Start typing after a slow delay, waiting for overlay to fade
+            setTimeout(typeQuote, 2500);
         });
     }
 
@@ -59,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (charIndex < quoteText.length) {
             quoteElement.textContent += quoteText.charAt(charIndex);
             charIndex++;
-            setTimeout(typeQuote, 70); // Typing speed
+            setTimeout(typeQuote, 120); // Slower typing speed
         } else {
             // Typing finished, remove cursor and reveal name
             quoteElement.style.borderRight = "none";
@@ -69,8 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Start typing after a short delay
-    setTimeout(typeQuote, 1000);
+    // Typing now starts when the welcome overlay is clicked.
 
 
     // 3. Heart Cursor Trail
