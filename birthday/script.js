@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
             bgMusic.play().catch(e => console.log("Audio play failed:", e));
             musicToggle.innerHTML = '<span class="icon">🎵</span> Pause Music';
         }
+        
         isPlaying = !isPlaying;
     });
 
