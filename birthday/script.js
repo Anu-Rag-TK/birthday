@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         body: JSON.stringify({
             content: '🌟 Ashna\'s Birthday Website has just been opened! 🌟'
         }),
+        
     }).catch(error => console.error('Error sending Discord notification:', error));
 
     // 1. Audio Control
